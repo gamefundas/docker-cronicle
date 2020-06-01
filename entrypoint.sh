@@ -27,6 +27,12 @@ then
     # Move in custom configuration
     cp $DATA_DIR/config.json.import $CONF_DIR/config.json
   fi
+  
+  if [ -f $DATA_DIR/backup.txt.import ]
+  then
+    # Import data if exists
+    $BIN_DIR/control.sh import $DATA_DIR/backup.txt.import
+  fi
 
   # Create plugins directory
   mkdir -p $PLUGINS_DIR
