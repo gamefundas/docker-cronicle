@@ -4,6 +4,6 @@ set -eux
 
 cronicle_version=0.8.29
 
-docker tag croncile:$cronicle_version $DOCKER_REPO:$cronicle_version
+docker tag cronicle:$cronicle_version $DOCKER_REPO:$cronicle_version
 docker push $DOCKER_REPO:$cronicle_version
 docker push $DOCKER_REPO:latest
