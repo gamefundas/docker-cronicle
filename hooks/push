@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -eux
+
+cronicle_version=0.8.29
+
+docker tag gamefundas/croncile:$cronicle_version $DOCKER_REPO:$cronicle_version
+docker push $DOCKER_REPO:$cronicle_version
