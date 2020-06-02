@@ -14,6 +14,7 @@ RUN        curl -s https://raw.githubusercontent.com/jhuckaby/Cronicle/master/bi
 
 WORKDIR    /opt/cronicle/
 ADD        entrypoint.sh /entrypoint.sh
+RUN        chmod ugo+rx /entrypoint.sh
 
 EXPOSE     3012
 
