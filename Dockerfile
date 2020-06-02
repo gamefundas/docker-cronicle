@@ -16,6 +16,8 @@ WORKDIR    /opt/cronicle/
 ADD        entrypoint.sh /entrypoint.sh
 RUN        chmod ugo+rx /entrypoint.sh
 
+RUN        ["chmod", "+x", "/entrypoint.sh"]
+
 EXPOSE     3012
 
 # data volume is also configured in entrypoint.sh
